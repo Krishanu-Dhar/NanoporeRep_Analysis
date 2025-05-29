@@ -1,11 +1,24 @@
 """
 Description:
-To filter read IDs and it's associated metadata from its paf-file. Optional: Get a .txt file with
-just the read IDs (descending order of size, an no duplicates), when filtered across a minimum alignment
+To filter and sort read IDs and their associated metadata from the parent PAF file. Optional: Get a .txt file with
+just the read IDs (descending order of size, and no duplicates), when filtered across a minimum alignment
 length threshold (passed as an optional parameter).
 
-Author: Krishanu Dhar
-Date: 10-29-2025 (latest)
+Arguments:
+-r, --read_ids_file: Path to read IDs text file (.txt)
+-p, --paf_file: Path to the PAF file (Note: The PAF file has to be a parent to the Read IDs text file)
+-o, --output_file: Path to the output file (Comma-separated .txt file, which consists of the first 11 columns of metadata associated with the read ID, from the PAF file)
+-m, --minimum_alignment: Minimum alignment length to extract longer aligned read IDs onto a new .txt file {Optional}
+-oL, --long_ids_file: The new .txt file which has all the longer aligned read IDs (based on -minimum_alignment) {Optional}
+
+Usage:
+Run the shell script 'run_filter_paf_by_read_ids.sh'. Edit in specific paths and parameters as required.
+
+Author: 
+Krishanu Dhar
+
+Date: 
+10-29-2025 (latest)
 """
 
 import pandas as pd
