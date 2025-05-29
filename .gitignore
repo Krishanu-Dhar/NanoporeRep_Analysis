@@ -1,0 +1,20 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environments
+.venv/
+venv/
+
+# Ignore data and result files
+data/
+results/
+logs/
+
+# Ignore intermediate files
+*.bam
+*.sam
+*.fastq
+*.bedgraph
+*.wig
+*.log
