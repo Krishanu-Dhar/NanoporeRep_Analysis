@@ -16,8 +16,8 @@ FILTERED_BED="/s/sansam-lab/Try2_RepNano/RepNano/DNAscent_Snakemake/results/fork
 BRDU_PREFIX="/s/sansam-lab/Try2_RepNano/RepNano/analyze_bams/15_min/New2/BrdU_"
 EDU_PREFIX="/s/sansam-lab/Try2_RepNano/RepNano/analyze_bams/15_min/New2/EdU_"
 BAM_FILE="/s/sansam-lab/Try2_RepNano/RepNano/DNAscent_Snakemake/results/detect_combined/sample_15.bam"
-WINDOW_SIZE=100
-STEP_SIZE=10
+WINDOW_SIZE=100 # (in bp, not thymidine positions)
+STEP_SIZE=10 # (in bp, not thymidine positions)
 
 # === Run the script ===
 python /s/sansam-lab/Try2_RepNano/RepNano/scripts/brdu_edu_sliding_windows_from_bam.py \
