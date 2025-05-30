@@ -1,10 +1,12 @@
 #!/bin/bash
-# This shell script runs a python script that extracts the metadata associated with a set of read IDs (TXT_FILE), sort them (based on alignment lengths)
+# This shell script runs a Python script that extracts the metadata associated with a set of read IDs (TXT_FILE), sorts them (based on alignment lengths)
 #SBATCH --job-name=run_filter_paf_by_read_ids
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=16G
 #SBATCH --time=02:00:00
 #SBATCH --partition=serial
+
+# This shell script runs the script filter_paf_by_read_ids.py
 
 # === Loading modules ===
 module purge
