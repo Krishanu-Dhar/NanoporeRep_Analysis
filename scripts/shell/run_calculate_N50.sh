@@ -9,8 +9,8 @@ module purge
 module load python samtools matplotlib
 
 # Parent directory where you want all the PNGs to go
-PARENT_DIR=/s/sansam-lab/Multi_Label/ReplisomeTracer/plot_outputs
+PARENT_DIR=/path/to/output_directory/plots
 
 # Ensure pysam is in your environment
-python /s/sansam-lab/Multi_Label/ReplisomeTracer/scripts/calculate_N50.py --outdir $PARENT_DIR \
-/s/sansam-lab/Multi_Label/ReplisomeTracer/DNAscent_Snakemake/results/demuxed/*.bam
+python /path/to/directory/which_has_the/python_script/calculate_N50.py --outdir $PARENT_DIR \
+/path/to/directory/which/has_the_bamfiles/*.bam
