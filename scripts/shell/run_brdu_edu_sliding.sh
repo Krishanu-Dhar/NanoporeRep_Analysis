@@ -12,15 +12,15 @@ module purge
 module load slurm python pandas numpy matplotlib
 
 # === Paths and parameters ===
-FILTERED_BED="/s/sansam-lab/Try2_RepNano/RepNano/DNAscent_Snakemake/results/forkSense/sample_15/final_filtered.bed"
-BRDU_PREFIX="/s/sansam-lab/Try2_RepNano/RepNano/analyze_bams/15_min/New2/BrdU_"
-EDU_PREFIX="/s/sansam-lab/Try2_RepNano/RepNano/analyze_bams/15_min/New2/EdU_"
-BAM_FILE="/s/sansam-lab/Try2_RepNano/RepNano/DNAscent_Snakemake/results/detect_combined/sample_15.bam"
+FILTERED_BED="/path/to/the/filtered_bedfile/final_filtered.bed"
+BRDU_PREFIX="/path/to/the/output_directory/with_prefix/BrdU_"
+EDU_PREFIX="/path/to/the/output_directory/with_prefix/EdU_"
+BAM_FILE="path/to/the/bamfile/sample_15.bam"
 WINDOW_SIZE=100 # (in bp, not thymidine positions)
 STEP_SIZE=10 # (in bp, not thymidine positions)
 
 # === Run the script ===
-python /s/sansam-lab/Try2_RepNano/RepNano/scripts/brdu_edu_sliding_windows_from_bam.py \
+python /path/to/the/python_script/brdu_edu_sliding_windows_from_bam.py \
   --bam "$BAM_FILE" \
   --brdu_output "$BRDU_PREFIX" \
   --edu_output "$EDU_PREFIX" \
